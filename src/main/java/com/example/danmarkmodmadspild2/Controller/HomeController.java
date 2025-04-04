@@ -9,9 +9,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model)
+    {
         return "home/index";
     }
+
+    @GetMapping("/forbruger")
+    public String forbruger(Model model)
+    {
+        return "home/forbruger";
+    }
+
 
     @GetMapping("/virksomhed")
     public String showVirksomhedPage() {
