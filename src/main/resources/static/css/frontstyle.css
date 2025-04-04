@@ -47,7 +47,7 @@ p {
     margin-top: 60px;          /* Giver lidt luft under logoet */
 }
 
-.forbruger-billede {
+.forside-billeder {
     width: 250px;
     height: auto;
     border-radius: 12px;
@@ -55,6 +55,33 @@ p {
     transition: transform 0.3s;
 }
 
-.forbruger-billede:hover {
+.forside-billeder:hover {
     transform: scale(1.05);
+}
+
+.brugergruppe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.brugergruppe-box {
+    text-align: center;
+    margin: 0 30px; /* Luft mellem billederne */
+}
+
+.brugergruppe-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.brugergruppe-box h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #0E2F23;
+    font-family: Arial, sans-serif;
 }
