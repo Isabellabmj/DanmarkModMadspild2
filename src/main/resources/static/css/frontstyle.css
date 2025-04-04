@@ -1,0 +1,60 @@
+.logo {
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+}
+
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #faf3e0;
+}
+
+header {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    width: 180px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;           /* Større og mere markant */
+    text-align: center;
+    color: #0E2F23;
+    font-family: 'Arial', sans-serif;
+}
+
+p {
+    margin: 10px 0 0 0;
+    font-size: 30px;           /* Lidt større tekst */
+    color: #0E2F23;
+    font-family: 'Arial', sans-serif;
+}
+
+.div1 {
+    text-align: center;
+    margin-top: 60px;          /* Giver lidt luft under logoet */
+}
+
+.forbruger-billede {
+    width: 250px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.forbruger-billede:hover {
+    transform: scale(1.05);
+}
