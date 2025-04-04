@@ -11,4 +11,11 @@ public class HomeController {
     {
         return "home/index";
     }
+
+    @GetMapping("/forbruger")
+    public String forbruger(Model model)
+    {
+        return "home/forbruger";
+    }
+
 }
