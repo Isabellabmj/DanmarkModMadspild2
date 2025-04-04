@@ -1,0 +1,10 @@
+
+body {
+    background-color: #faf3e0; /* Varm beige farve */
+    color: #2d3e3f; /* Matcher en mørkere grøn/sort tekstfarve */
+}
+
+.logo {
+    width: 180px;  /* Justér størrelsen */
+    height: auto;  /* Bevarer proportionerne */
+}

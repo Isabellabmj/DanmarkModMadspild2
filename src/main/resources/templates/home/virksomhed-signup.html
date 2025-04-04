@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="virksomhed.css">
 </head>
 <body>
-<!-- Home container knap -->
+
 <div class="home-button-container">
     <form th:action="@{/}" method="get">
-        <button type="submit">Home</button>
+        <!-- Home Button with Image -->
+        <button type="submit" class="home-button">
+            <img src="/images/logo.png" alt="Home" class="Logo">
+        </button>
     </form>
 </div>
 
@@ -19,7 +22,7 @@
     <h2>Opret Virksomhedsprofil</h2>
     <form th:action="@{/virksomhed-signup}" method="post">
         <div class="form-group">
-            <label for="virksomhedsNavn">Business Name:</label>
+            <label for="virksomhedsNavn">Virksomhedsnavn:</label>
             <input type="text" id="virksomhedsNavn" name="virksomhedsnavn" required>
         </div>
     </form>
