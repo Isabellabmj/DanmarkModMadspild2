@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Virksomhed</title>
-    <link rel="stylesheet" href="virksomhed.css">
+    <link rel="stylesheet" href="/virksomhed.css">
+    <link rel="stylesheet" href="/virksomhed-signup.css">
 </head>
 <body>
 
 <div class="home-button-container">
     <form th:action="@{/}" method="get">
-        <!-- Home Button with Image -->
         <button type="submit" class="home-button">
-            <img src="/images/logo.png" alt="Home" class="Logo">
+            <img src="/images/HomeButtonLogo.png" alt="Home" class="home-logo">
         </button>
     </form>
 </div>
+
 
 
 <div class="form-container">
@@ -25,9 +26,31 @@
             <label for="virksomhedsNavn">Virksomhedsnavn:</label>
             <input type="text" id="virksomhedsNavn" name="virksomhedsnavn" required>
         </div>
+
+
+        <div class="form-group">
+            <label for="cvrNr">CVR Nummer:</label>
+            <input type="text" id="cvrNr" name="cvrNr" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lokation">Lokation:</label>
+            <input type="text" id="lokation" name="lokation" required>
+        </div>
+
+        <div class="form-group">
+            <label for="kodeord">Kodeord:</label>
+            <input type="password" id="kodeord" name="kodeord" required>
+        </div>
+
+        <button type="submit">Opret Profil</button>
     </form>
 </div>
-
 
 </body>
 </html>
