@@ -1,87 +1,150 @@
-.logo {
-    width: 300px;
-    height: auto;
-    margin: 20px 0;
-    display: block;
-}
-
-
-
-body
-{
+body {
     margin: 0;
     padding: 0;
     background-color: #faf3e0;
+    font-family: Arial, sans-serif;
 }
 
-header {
+a {
+    text-decoration: none;
+}
+
+.header-logo {
     position: absolute;
     top: -40px;
     left: 10px;
+    width: 180px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-left {
     display: flex;
     align-items: center;
 }
 
-.header-logo {
-    width: 180px;
-    height: auto;
+.right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-media-bar {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media-bar img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease;
+}
+
+.social-media-bar img:hover {
+    transform: scale(1.15);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.search-bar button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #0E2F23;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #146c43;
+}
+
+.top-divider {
+    border: none;
+    height: 2px;
+    background-color: #0E2F23;
+    margin: 20px 0; /* Endnu mindre luft over/under */
+    width: 100%;
+}
+
+.intro {
+    text-align: center;
+    margin-top: -20px; /* Løfter intro op mod top-divider */
+    padding: 20px;
 }
 
 h1 {
-    margin: 0;
-    font-size: 50px;           /* Større og mere markant */
-    text-align: center;
+    font-size: 48px;
     color: #0E2F23;
-    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
 }
 
 p {
-    margin: 10px 0 0 0;
-    font-size: 30px;           /* Lidt større tekst */
+    font-size: 20px;
     color: #0E2F23;
-    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
 }
 
-.div1 {
+.brugergruppe-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.bruger-boks {
+    background-color: #f0e8d9;
+    padding: 20px;
+    border-radius: 16px;
+    width: 400px;
+    height: 500px;
     text-align: center;
-    margin-top: 60px;          /* Giver lidt luft under logoet */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bruger-boks h3 {
+    font-size: 22px;
+    color: #0E2F23;
+    margin-bottom: 15px;
+}
+
+.bruger-boks p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
 }
 
 .forside-billeder {
-    width: 250px;
+    width: 220px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .forside-billeder:hover {
     transform: scale(1.05);
-}
-
-.brugergruppe-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.brugergruppe-box {
-    text-align: center;
-    margin: 0 30px; /* Luft mellem billederne */
-}
-
-.brugergruppe-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.brugergruppe-box h3 {
-    margin-top: 10px;
-    font-size: 20px;
-    color: #0E2F23;
-    font-family: Arial, sans-serif;
 }
