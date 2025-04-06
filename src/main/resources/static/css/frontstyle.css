@@ -252,3 +252,22 @@ p {
 {
     display: block;
 }
+
+.home-icon
+{
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease; /*Her gør vi animationen mere blød*/
+}
+
+.home-icon:hover
+{
+    transform: scale(1.15); /*Vi forstørrer ikonet når vi holder musen over*/
+}
+
+.home-knap
+{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
