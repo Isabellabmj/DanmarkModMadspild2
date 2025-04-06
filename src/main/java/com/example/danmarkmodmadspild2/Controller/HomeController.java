@@ -20,6 +20,11 @@ public class HomeController {
         return "home/forbruger";
     }
 
+    @GetMapping("/informationsSide")
+    public String informationsSide() {
+        return "informationsSide";  // Returnerer "informationsSide" view via POST
+    }
+
 
     @GetMapping("/virksomhed")
     public String showVirksomhedPage() {
