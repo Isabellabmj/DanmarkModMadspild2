@@ -36,6 +36,11 @@ a
     background-color: #faf3e0; /* samme som din baggrund, så det ikke bliver gennemsigtigt */
     /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* valgfrit, men giver lidt flot skyggeeffekt */
 
+    /*Hvis du vil lave hele headeren sticky inkl. f.eks. din <hr class="top-divider">,
+    kan du også lægge <div class="top-wrapper"> og <hr> ind i en <header> og gøre header sticky i stedet –
+    det afhænger af, hvor meget du vil "klæbe fast".*/
+
+
 }
 
 .logo-left  /*bruges kun til at style containeren omkring logoet, sådan at jeg kan style det uden at påvirke SoMe ikonerne*/
@@ -246,4 +251,23 @@ p {
 .dropdown:hover .dropdown-content
 {
     display: block;
+}
+
+.home-icon
+{
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease; /*Her gør vi animationen mere blød*/
+}
+
+.home-icon:hover
+{
+    transform: scale(1.15); /*Vi forstørrer ikonet når vi holder musen over*/
+}
+
+.home-knap
+{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
