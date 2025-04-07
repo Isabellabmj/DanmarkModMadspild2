@@ -22,4 +22,13 @@ public class ForbrugerController {
         model.addAttribute("resultat", "Her er dine resultater baseret på: " + ingredienser);
         return "forbruger/koeleskab";
     }
+
+
+    @GetMapping("/forbruger/informationspage")
+    public String informationsPage()
+    {
+        return "forbruger/informationspage";
+    }
+
+
 }

@@ -271,3 +271,100 @@ p {
     align-items: center;
     margin-right: 10px;
 }
+
+
+
+/*  BARE REDIGERE OG INDSÆT FØR DETTE, SÅ JEG ALTID LIGE KAN HIVE DET TILBAGE I ET ANDET   */
+/*  JEG HAR LIGE TILFØJET MIN STYLESHEET HERIND, FOR AT SE EN ÆNDRING */
+/* Baggrund og generel tekstfarve */
+body {
+    background-color: #faf3e0;
+    color: #2d3e3f;
+    font-family: Arial, sans-serif;
+}
+
+/* Header/logo */
+header {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+}
+
+/* Intro sektion (billede + tekst) */
+.intro-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.intro-baggrund {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.intro {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 40px 5%;
+    margin-top: -50px;
+    max-width: 800px;
+    color: #0E2F23;
+}
+
+.intro h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #0E2F23;
+}
+
+.intro p {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #0E2F23;
+}
+
+/* Underrubrikker hvis du bruger dem */
+.subheading {
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    margin-top: -10px;
+    color: #2d3e3f;
+}
+
+/* Paragraftekst / madspild info */
+.madspilds-info {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Links */
+.madspild-link {
+    text-decoration: underline;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.madspild-link:hover {
+    color: #0056b3;
+}
