@@ -30,5 +30,17 @@ public class ForbrugerController {
         return "forbruger/informationspage";
     }
 
+    @GetMapping("/forbruger/frivilig")
+    public String frivilig()
+    {
+        return "forbruger/frivilig";
+    }
+
+    @GetMapping("/forbruger/nyhedsbrev")
+    public String nyhedsbrev()
+    {
+        return "forbruger/nyhedsbrev";
+    }
+
 
 }
