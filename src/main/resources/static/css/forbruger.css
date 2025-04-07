@@ -154,7 +154,7 @@ header {
     color: #0E2F23;
 }
 
-/* Faktabokx til informationssiden */
+/* Faktaboks til informationssiden */
 .faktaboks {
     background-color: #f0f8f5;
     border-left: 6px solid #4CAF50;
@@ -173,4 +173,3 @@ header {
 .faktaboks p {
     margin: 10px 0 0 0;
 }
-
