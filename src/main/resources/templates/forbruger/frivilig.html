@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Frivilig</title>
+
+    <link rel="stylesheet" href="/css/frontstyle.css">
+    <link rel="stylesheet" href="/css/frivilig.css">
+
+</head>
+
+<div class="top-wrapper">
+    <div class="logo-left">
+        <img src="/images/index/KorrektLogo.png" alt="Danmark mod Madspild logo" class="header-logo">
+    </div>
+
+    <div class="right-side">
+
+        <a href="/" class="home-knap" title="Gå til forsiden">
+            <img src="/images/index/HomeKnap.png" alt="Home" class="home-icon">
+        </a>
+
+        <div class="dropdown">
+            <button class="dropdown-knap">Nyttige links ▾</button>
+            <div class="dropdown-content">
+                <a href="#">Kontakt os</a>
+                <a href="/organisation">Om Danmark mod Madspild</a>
+                <a href="#">Årsrapport</a>
+                <a href="#">Interessant for organisationer</a>
+            </div>
+        </div>
+
+        <div class="social-media-bar">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="/images/SocialMedia/facebookBlaa.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="/images/SocialMedia/IG.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="/images/SocialMedia/Youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="/images/SocialMedia/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="#">
+                <img src="/images/SocialMedia/UKflag.png" alt="English">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Søg på siden">
+            <button>Søg</button>
+        </div>
+
+    </div>
+</div>
+
+<hr class="top-divider">
+
+<body>
+<section class="frivillig-info">
+    <h1>Bliv Frivillig 🙌</h1>
+    <p>Vil du være med til at bekæmpe madspild og gøre en forskel?<br>
+        Som frivillig hjælper du os med at redde mad, arrangere events og sprede budskabet.<br>
+        Du bestemmer selv, hvor meget tid du vil bruge!</p>
+</section>
+
+<section class="frivillig-formular">
+    <h2>Tilmeld dig her 👇</h2>
+    <form action="#" method="post">
+        <label for="navn"> Navn:</label>
+        <input type="text" id="navn" name="navn" required>
+
+        <label for="alder"> Alder:</label>
+        <input type="number" id="alder" name="alder" min="12" required>
+
+        <label for="telefon"> Telefonnummer:</label>
+        <input type="tel" id="telefon" name="telefon" required>
+
+        <label for="email"> Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="by"> By / Postnummer:</label>
+        <input type="text" id="by" name="by">
+
+        <label for="interesse"> Hvad vil du gerne hjælpe med?</label>
+        <select id="interesse" name="interesse">
+            <option value="madredning">Redde overskudsmad</option>
+            <option value="events">Hjælpe til ved events</option>
+            <option value="sortering">Sortere mad og varer</option>
+            <option value="andet">Andet</option>
+        </select>
+
+        <label for="tid"> Hvor meget tid kan du afsætte?</label>
+        <input type="text" id="tid" name="tid" placeholder="f.eks. 3 timer om ugen">
+
+        <label for="besked"> Eventuel besked:</label>
+        <textarea id="besked" name="besked" rows="4"></textarea>
+
+        <button type="submit">Tilmeld dig!</button>
+    </form>
+</section>
+
+</body>
+</html>
+
+

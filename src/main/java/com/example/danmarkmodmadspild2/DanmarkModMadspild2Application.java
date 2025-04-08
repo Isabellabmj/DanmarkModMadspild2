@@ -11,5 +11,4 @@ public class DanmarkModMadspild2Application
     {
         SpringApplication.run(DanmarkModMadspild2Application.class, args);
     }
-
 }

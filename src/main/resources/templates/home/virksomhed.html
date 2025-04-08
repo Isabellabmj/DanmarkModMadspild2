@@ -8,6 +8,7 @@
 </head>
 <body>
 
+
 <div class="home-button-container">
     <form th:action="@{/}" method="get">
         <button type="submit" class="home-button">
@@ -20,15 +21,17 @@
     <h2>Velkommen Virksomhed</h2>
 
     <div class="button-container">
-        <form th:action="@{/login}" method="get">
+        <form th:action="@{/virksomhed-login}" method="get">
             <button type="submit" class="button">Login</button>
         </form>
 
-        <form th:action="@{/signup}" method="get">
+        <form th:action="@{/virksomhed-signup}" method="get">
             <button type="submit" class="button">Sign Up</button>
         </form>
     </div>
 </div>
+
+
 
 </body>
 </html>
