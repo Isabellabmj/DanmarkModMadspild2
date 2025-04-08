@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <title>Danmark mod Madspild</title>
     <link rel="stylesheet" href="/css/frontstyle.css">
+
 </head>
 <body>
 <div class="top-wrapper">
     <div class="logo-left">
-        <img src="/images/index/KorrektLogo.png" alt="Danmark mod Madspild logo" class="header-logo">
+        <a href="/">
+            <img src="/images/index/KorrektLogo.png" alt="Danmark mod Madspild logo" class="header-logo">
+        </a>
     </div>
 
     <div class="right-side">
-
-        <a href="/" class="home-knap" title="Gå til forsiden">
-            <img src="/images/index/HomeKnap.png" alt="Home" class="home-icon">
-        </a>
 
         <div class="dropdown">
             <button class="dropdown-knap">Nyttige links ▾</button>
@@ -53,7 +52,82 @@
     </div>
 </div>
 
-
 <hr class="top-divider">
+
+<div class="intro-wrapper">
+    <img src="/images/index/stopMadspild.png" alt="Madspild baggrund" class="intro-baggrund">
+
+    <div class="intro">
+        <h1>Brug dine ingredienser – undgå madspild</h1>
+        <p>
+            Har du råvarer i dit køleskab, du ikke ved hvad du skal bruge til? <br>
+            Indtast de ingredienser, du har, og få forslag til lækre retter baseret på det, du allerede har derhjemme.<br>
+            Tilføj én ingrediens ad gangen. Tryk på “Tilføj ingrediens” for hvert nyt input.
+        </p>
+    </div>
+</div>
+
+<div class="koeleskab-resultat">
+    <div class="input-venstre">
+        <form action="/find-opskrifter" method="POST">
+            <div id="ingredienser-container"> <!--1: det er her vi lægger nye inputfelter, som ingredienser i en indkøbskurv-->
+                <input type="text" name="ingredienser" placeholder="Tilføj et ingrediens" class="ingrediens-felt">
+            </div>
+
+            <button type="button" onclick="tilfoejIngrediens()" class="ingrediens-knap">Tilføj ingrediens</button>
+            <br><br>
+            <button type="submit" class="ingrediens-knap">Find opskrifter</button>
+        </form>
+    </div>
+
+    <div class="resultat-container">
+        <div th:if="${opskrifter}"> <!-- hvis der kommer Opskrift-objekter -->
+            <h2>Vi foreslår:</h2>
+            <div th:each="opskrift : ${opskrifter}" class="opskrift-kort">
+                <img th:src="@{${opskrift.billedeURL}}" alt="Billede af opskrift" class="opskrift-billede">
+                <div>
+                    <h3 th:text="${opskrift.titel}"></h3>
+                    <p th:text="${opskrift.beskrivelse}"></p> <!-- Her vises beskrivelsen -->
+                    <ul>
+                        <li th:each="ingrediens : ${opskrift.ingredienser}" th:text="${ingrediens.raavareNavn}"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div th:if="${resultat}">
+            <p th:text="${resultat}"></p>
+        </div>
+    </div>
+
+    <div class="hoejre-side">
+        <!-- Her kan du placere billeder, tips eller andet -->
+        <img src="/images/forbruger/madlavning.png" alt="Madlavning" class="koeleskabs-billede"> <!--class: "køleskab" er ikke beskrivende, har ændret billedet-->
+    </div>
+</div>
+
+<script>
+    function tilfoejIngrediens() //Vi opretter en metode (funktion) der kan blive kaldt når vi trykker på knappen
+    {
+        //const: beskytter Java variablen og har intet at gøre med hvad forbruger skriver i input
+        //Som hvis det var en porstkasse, man må gerne smide breve i postkassen, men man må ikke skifte den ud med en toaster
+        const container = document.getElementById("ingredienser-container"); // 2: find den div, der har id="ingredienser-container", der skal tilføjes flere ingredienser
+
+        const wrapper = document.createElement("div"); //ny div omkring hvert felt
+        wrapper.className = "ingrediens-linje";
+
+        const nyInput = document.createElement("input");//opretter et nyt input felt, med type, name osv. som vi ser herunder og som i div ovenfor
+        nyInput.type = "text";
+        nyInput.name = "ingredienser"; // vigtigt at det er samme navn, så det bliver til en liste
+        nyInput.placeholder = "Tilføj et ingrediens";
+        nyInput.className = "ingrediens-felt";
+
+        wrapper.appendChild(nyInput);
+        container.appendChild(wrapper); // tilføj wrapperen (med input) til container
+    }
+</script>
+
+<!--funktion: når vi kalder funktionen tilfoejIngredienser, skal -->
+
 </body>
 </html>
