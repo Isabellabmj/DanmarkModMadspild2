@@ -20,7 +20,6 @@ public class HomeController {
         return "home/forbruger";
     }
 
-
     @GetMapping("/virksomhed")
     public String showVirksomhedPage() {
         return "home/virksomhed";
@@ -71,7 +70,6 @@ public class HomeController {
     public String showDashboard() {
         return "home/virksomhed-dashboard";  // Returner dashboard view
     }
-
 }
 
 

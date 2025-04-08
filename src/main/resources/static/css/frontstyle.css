@@ -387,4 +387,13 @@ p {
     background-color: #ffffff;
 }
 
+/* Vandmærke */
+.footer-copyright {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 20px;
+}
+
 
