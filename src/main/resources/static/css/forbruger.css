@@ -47,15 +47,15 @@ header {
 
 /* Styling for linket */
 .madspild-link {
-    text-decoration: underline;
-    color: #007BFF; /* Vælg en blå farve for linket */
-    font-weight: bold; /* Gør linket fedt */
-    transition: color 0.3s ease; /* Tilføjer en glidende overgang, når farven ændres */
+    color: #0E2F23; /* Mørkegrøn som resten af dit tema */
+    font-weight: bold;
+    text-decoration: underline; /* eller none, hvis du ikke vil have stregen */
+    transition: color 0.3s ease;
 }
 
-/* Ændrer linkets farve ved hover */
 .madspild-link:hover {
-    color: #0056b3;  /* En mørkere blå, når brugeren holder musen over linket */
+    color: #146c43; /* En lidt lysere grøn ved hover */
+    text-decoration: none;
 }
 
 
