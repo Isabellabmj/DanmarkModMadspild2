@@ -31,22 +31,52 @@ public class HomeController {
         return "home/virksomhed";
     }
 
-    @GetMapping("/signup")
+    @GetMapping("/virksomhed-signup")
     public String showSignupPage() {
         return "home/virksomhed-signup";
     }
 
-    @PostMapping("/signup")
-    public String handleSignup(@RequestParam String companyName,
-                               @RequestParam String email,
-                               @RequestParam String location,
-                               @RequestParam String password) {
-        // signup validering
-        return "redirect:/home/login"; // omdirigerer til login ved signup succes
+    @GetMapping("/virksomhed-signup-bekraeftelse")
+    public String visBekraeftelse() {
+        return "home/virksomhed-signup-bekraeftelse";
     }
 
-    @GetMapping("/login")
+    @PostMapping("/virksomhed-signup")
+    public String handleSignup(@RequestParam String virksomhedsnavn,
+                               @RequestParam String cvrNr,
+                               @RequestParam String email,
+                               @RequestParam String lokation,
+                               @RequestParam String kodeord) {
+
+        return "redirect:/virksomhed-signup-bekraeftelse";
+    }
+
+    @GetMapping("/virksomhed-login")
     public String showLoginPage() {
         return "home/virksomhed-login";
     }
+
+    @PostMapping("/virksomhed-login")
+    public String loginVirksomhed(@RequestParam String brugernavn,
+                                  @RequestParam String kodeord,
+                                  Model model) {
+        if ((brugernavn.equals("firma123") || brugernavn.equals("firma@mail.com")) && kodeord.equals("hemmelig123")) {
+            return "redirect:/virksomhed-dashboard";
+        }
+
+        if (brugernavn.isEmpty() || kodeord.isEmpty()) {
+            model.addAttribute("loginFejl", "Brugernavn og kodeord skal udfyldes.");
+        } else {
+            model.addAttribute("loginFejl", "Forkert brugernavn eller kodeord.");
+        }
+        return "home/virksomhed-login";
+    }
+
+    @GetMapping("/virksomhed-dashboard")
+    public String showDashboard() {
+        return "home/virksomhed-dashboard";  // Returner dashboard view
+    }
+
 }
+
+
