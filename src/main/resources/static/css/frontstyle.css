@@ -397,15 +397,10 @@ p {
 }
 
 /* Tilbage til forsiden button */
-.tilbage-wrapper {
-    display: flex;
-    justify-content: center; /* Centrerer knappen horisontalt */
-    margin-top: 20px; /* Juster afstand ovenfor */
-}
-
-/* Tilbage til forsiden knap */
 .back-to-home-btn {
-    background-color: #4CAF50; /* Grøn farve */
+    justify-content: center;
+    margin-left: 20px;
+    background-color: #699a6b; /* Grøn farve */
     color: white;
     font-size: 16px;
     padding: 10px 20px;
