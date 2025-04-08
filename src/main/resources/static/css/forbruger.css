@@ -1,0 +1,138 @@
+
+body {
+    background-color: #faf3e0; /* Varm beige farve */
+    color: #2d3e3f; /* Matcher en mørkere grøn/sort tekstfarve */
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2d3e3f;
+}
+
+/*Styling af underrubik*/
+.subheading{
+    font-size: 1.2em;
+    font-style: italic; /* Gør teksten kursiv */
+    text-align: center;
+    color: #2d3e3f; /* Match farven til resten af designet */
+    margin-top: -10px; /* Justerer placeringen tættere på h1 */
+}
+
+
+/* styling til logoet*/
+header {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;  /* Justér størrelsen */
+    height: auto;  /* Bevarer proportionerne */
+}
+
+/* Styling for paragrafen af madspildsinfo*/
+.madspilds-info{
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;  /* Giver plads mellem linjerne */
+    font-family: Arial, sans-serif;
+    color: #333;  /* Mørk grå farve for teksten */
+    margin-bottom: 20px;  /* Giver plads nedenunder */
+}
+
+/* Styling for linket */
+.madspild-link {
+    text-decoration: underline;
+    color: #007BFF; /* Vælg en blå farve for linket */
+    font-weight: bold; /* Gør linket fedt */
+    transition: color 0.3s ease; /* Tilføjer en glidende overgang, når farven ændres */
+}
+
+/* Ændrer linkets farve ved hover */
+.madspild-link:hover {
+    color: #0056b3;  /* En mørkere blå, når brugeren holder musen over linket */
+}
+
+
+
+
+
+/* Kode til styling af boks*/
+.brugergruppe-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.bruger-boks {
+    background-color: #f0e8d9;
+    padding: 20px;
+    border-radius: 16px;
+    width: 350px;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bruger-boks h3 {
+    font-size: 22px;
+    color: #0E2F23;
+    margin-bottom: 20px;
+}
+
+.bruger-billede {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.bruger-boks p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+}
+
+
+/* En anden struktur for styling af box */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #f0e8d9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.box img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+}

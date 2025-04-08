@@ -3,6 +3,8 @@ package com.example.danmarkmodmadspild2.Controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
@@ -24,6 +26,66 @@ public class HomeController {
     public String organisation(Model model) {
         return "organisation/organisation";  // viser organisation.html fra organisation-mappen
     }
+}
+
+
+    @GetMapping("/informationsSide")
+    public String informationsSide() {
+        return "informationsSide";  // Returnerer "informationsSide" view via POST
+    }
+
+
+    @GetMapping("/virksomhed")
+    public String showVirksomhedPage() {
+        return "home/virksomhed";
+    }
+
+    @GetMapping("/virksomhed-signup")
+    public String showSignupPage() {
+        return "home/virksomhed-signup";
+    }
+
+    @GetMapping("/virksomhed-signup-bekraeftelse")
+    public String visBekraeftelse() {
+        return "home/virksomhed-signup-bekraeftelse";
+    }
+
+    @PostMapping("/virksomhed-signup")
+    public String handleSignup(@RequestParam String virksomhedsnavn,
+                               @RequestParam String cvrNr,
+                               @RequestParam String email,
+                               @RequestParam String lokation,
+                               @RequestParam String kodeord) {
+
+        return "redirect:/virksomhed-signup-bekraeftelse";
+    }
+
+    @GetMapping("/virksomhed-login")
+    public String showLoginPage() {
+        return "home/virksomhed-login";
+    }
+
+    @PostMapping("/virksomhed-login")
+    public String loginVirksomhed(@RequestParam String brugernavn,
+                                  @RequestParam String kodeord,
+                                  Model model) {
+        if ((brugernavn.equals("firma123") || brugernavn.equals("firma@mail.com")) && kodeord.equals("hemmelig123")) {
+            return "redirect:/virksomhed-dashboard";
+        }
+
+        if (brugernavn.isEmpty() || kodeord.isEmpty()) {
+            model.addAttribute("loginFejl", "Brugernavn og kodeord skal udfyldes.");
+        } else {
+            model.addAttribute("loginFejl", "Forkert brugernavn eller kodeord.");
+        }
+        return "home/virksomhed-login";
+    }
+
+    @GetMapping("/virksomhed-dashboard")
+    public String showDashboard() {
+        return "home/virksomhed-dashboard";  // Returner dashboard view
+    }
+
 }
 
 

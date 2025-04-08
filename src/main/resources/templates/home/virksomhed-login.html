@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Virksomhed Login</title>
+    <link rel="stylesheet" href="/virksomhed.css">
+    <link rel="stylesheet" href="/virksomhed-login.css">
+
+</head>
+<body>
+
+<div class="home-button-container">
+    <form th:action="@{/}" method="get">
+        <button type="submit" class="home-button">
+            <img src="/images/HomeButtonLogo.png" alt="Home" class="home-logo">
+        </button>
+    </form>
+</div>
+
+<div class="form-container">
+    <h2>Log ind som virksomhed</h2>
+    <form th:action="@{/virksomhed-login}" method="post">
+        <div class="form-group">
+            <label for="brugernavn">Virksomhedsnavn eller Email:</label>
+            <input type="text" id="brugernavn" name="brugernavn" required>
+        </div>
+
+        <div class="form-group">
+            <label for="kodeord">Kodeord:</label>
+            <input type="password" id="kodeord" name="kodeord" required>
+        </div>
+
+        <div th:if="${loginFejl}" style="color: red; margin-top: 10px;">
+            <p th:text="${loginFejl}"></p>
+        </div>
+
+        <button type="submit">Log ind</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Virksomhed</title>
+    <link rel="stylesheet" href="/virksomhed.css">
+    <link rel="stylesheet" href="/virksomhed-signup.css">
+</head>
+<body>
+
+<div class="home-button-container">
+    <form th:action="@{/}" method="get">
+        <button type="submit" class="home-button">
+            <img src="/images/HomeButtonLogo.png" alt="Home" class="home-logo">
+        </button>
+    </form>
+</div>
+
+<div class="form-container">
+    <h2>Opret Virksomhedsprofil</h2>
+    <form th:action="@{/virksomhed-signup}" method="post">
+        <div class="form-group">
+            <label for="virksomhedsNavn">Virksomhedsnavn:</label>
+            <input type="text" id="virksomhedsNavn" name="virksomhedsnavn" required>
+        </div>
+
+
+        <div class="form-group">
+            <label for="cvrNr">CVR Nummer:</label>
+            <input type="text" id="cvrNr" name="cvrNr" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lokation">Lokation:</label>
+            <input type="text" id="lokation" name="lokation" required>
+        </div>
+
+        <div class="form-group">
+            <label for="kodeord">Kodeord:</label>
+            <input type="password" id="kodeord" name="kodeord" required>
+        </div>
+
+        <button type="submit">Opret Profil</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>

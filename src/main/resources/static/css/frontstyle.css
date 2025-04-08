@@ -1,0 +1,273 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #faf3e0;
+    font-family: Arial, sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.header-logo /*bruger jeg til at style selve logoet, men ikke placeringen, det er i logo-left*/
+{
+    position: absolute; /*Placeres uafhængigt af flow*/
+    top: -40px;
+    left: 10px;
+    width: 180px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.top-wrapper
+{
+    display: flex;
+    justify-content: space-between; /*Gør at vi kan placere logo til venstre og de andre ting til højre*/
+    align-items: center;
+    padding: 20px;
+
+    /*Dette kan vi bruge hvis vi gerne vil lave siden længere og vil have at top-wrapper skal forblive hvor den er på siden*/
+    /*position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #faf3e0; /* samme som din baggrund, så det ikke bliver gennemsigtigt */
+    /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* valgfrit, men giver lidt flot skyggeeffekt */
+
+    /*Hvis du vil lave hele headeren sticky inkl. f.eks. din <hr class="top-divider">,
+    kan du også lægge <div class="top-wrapper"> og <hr> ind i en <header> og gøre header sticky i stedet –
+    det afhænger af, hvor meget du vil "klæbe fast".*/
+
+
+}
+
+.logo-left  /*bruges kun til at style containeren omkring logoet, sådan at jeg kan style det uden at påvirke SoMe ikonerne*/
+{
+    display: flex;
+    align-items: center;
+}
+
+.right-side
+{
+    display: flex;
+    align-items: center;
+    gap: 20px; /*Gap er luft mellem elementerne, i vores tilfælde søgeflet, SoMe og dropdown*/
+}
+
+.social-media-bar {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media-bar img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease; /*Laver en blød overgang ved hover*/
+}
+
+.social-media-bar img:hover {
+    transform: scale(1.15); /*Vi giver det en zoom effekt*/
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px; /*Afrundede hjørner*/
+    border: 1px solid #ccc; /*Vi tilføjer en lys grå kant*/
+    width: 250px;
+}
+
+.search-bar button {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #0E2F23;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer; /*Pilen bliver ændret til en hånd når vi kører over søgefeltet*/
+    transition: background-color 0.2s ease;
+}
+
+.search-bar button:hover {
+    background-color: #146c43;
+}
+
+.top-divider {
+    border: none;
+    height: 2px;
+    background-color: #0E2F23;
+    margin: 20px 0; /* Endnu mindre luft over/under */
+    width: 100%;
+}
+
+
+h1 {
+    font-size: 48px;
+    color: #0E2F23;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #0E2F23;
+    line-height: 1.5;
+}
+
+.brugergruppe-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.bruger-boks {
+    background-color: #f0e8d9;
+    padding: 20px;
+    border-radius: 16px;
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bruger-boks h3 {
+    font-size: 22px;
+    color: #0E2F23;
+    margin-bottom: 15px;
+}
+
+.bruger-boks p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.forside-billeder {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.forside-billeder:hover {
+    transform: scale(1.05);
+}
+
+.intro-wrapper
+{
+    position: relative;
+    width: 100%;
+    height: 200px; /* Justér højde efter billedets højde */
+    overflow: hidden;
+}
+
+.intro-baggrund
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for billedet fylder boksen pænt */
+    z-index: 0;
+    opacity: 0.4; /* Gør billedet lyst så teksten bliver læselig */
+}
+
+.intro
+{
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 40px 20px;
+    margin-top: -50px; /*Jeg justere teksten her, op og ned*/
+}
+
+
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+.dropdown-knap
+{
+    background-color: #faf3e0;
+    color: #0E2F23;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dropdown-knap:hover
+{
+    background-color: #f0e8d9;
+}
+
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #faf3e0;
+    min-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.dropdown-content a
+{
+    color: #0E2F23;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child
+{
+    border-bottom: none;
+}
+
+.dropdown-content a:hover
+{
+    background-color: #f0e8d9;
+}
+
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+
+.home-icon
+{
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s ease; /*Her gør vi animationen mere blød*/
+}
+
+.home-icon:hover
+{
+    transform: scale(1.15); /*Vi forstørrer ikonet når vi holder musen over*/
+}
+
+.home-knap
+{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
