@@ -15,7 +15,6 @@ h1{
 /*Styling af underrubik*/
 .subheading{
     font-size: 1.2em;
-    font-style: italic; /* Gør teksten kursiv */
     text-align: left;
     color: #2d3e3f; /* Match farven til resten af designet */
     margin-top: -10px; /* Justerer placeringen tættere på h1 */
@@ -38,7 +37,7 @@ header {
 
 /* Styling for paragrafen af madspildsinfo*/
 .madspilds-info{
-    text-align: center;
+    text-align: left;
     font-size: 16px;
     line-height: 1.5;  /* Giver plads mellem linjerne */
     font-family: Arial, sans-serif;
