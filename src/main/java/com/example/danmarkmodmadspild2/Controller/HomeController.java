@@ -18,4 +18,12 @@ public class HomeController {
         return "home/forbruger";
     }
 
+
+    // Denne metode viser organisationens underside (organisation.html)
+    @GetMapping("/organisation")
+    public String organisation(Model model) {
+        return "organisation/organisation";  // viser organisation.html fra organisation-mappen
+    }
 }
+
+
