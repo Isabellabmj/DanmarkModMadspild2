@@ -396,4 +396,25 @@ p {
     padding-left: 20px;
 }
 
+/* Tilbage til forsiden button */
+.tilbage-wrapper {
+    display: flex;
+    justify-content: center; /* Centrerer knappen horisontalt */
+    margin-top: 20px; /* Juster afstand ovenfor */
+}
 
+/* Tilbage til forsiden knap */
+.back-to-home-btn {
+    background-color: #4CAF50; /* Grøn farve */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home-btn:hover {
+    background-color: #45a049; /* Mørkere grøn ved hover */
+}
