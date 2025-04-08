@@ -19,17 +19,17 @@ section.frivillig-formular {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
+.frivillig-form {
     display: flex;
     flex-direction: column;
 }
 
-label {
+.frivillig-label {
     margin-top: 1rem;
     font-weight: bold;
 }
 
-input, select, textarea {
+.frivillig-input, .frivillig-select, .frivillig-textarea {
     margin-top: 0.5rem;
     padding: 0.8rem;
     border: 1px solid #ccc;
@@ -37,7 +37,7 @@ input, select, textarea {
     font-size: 1rem;
 }
 
-button {
+.frivillig-button {
     margin-top: 2rem;
     padding: 1rem;
     background-color: #0b753d;
@@ -49,6 +49,6 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.frivillig-button:hover {
     background-color: rgba(16, 73, 41, 0.66);
 }

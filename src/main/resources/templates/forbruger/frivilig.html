@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>Frivilig</title>
 
-    <link rel="stylesheet" href="/css/frivilig.css">
+
     <link rel="stylesheet" href="/css/frontstyle.css">
+    <link rel="stylesheet" href="/css/frivilig.css">
+
 </head>
 
 <body>
@@ -16,9 +18,6 @@
 
     <div class="right-side">
 
-        <a href="/" class="home-knap" title="Gå til forsiden">
-            <img src="/images/index/HomeKnap.png" alt="Home" class="home-icon">
-        </a>
 
         <div class="dropdown">
             <button class="dropdown-knap">Nyttige links ▾</button>
@@ -56,49 +55,57 @@
     </div>
 </div>
 
+
 <hr class="top-divider">
 
-<div>
-<section class="frivillig-info">
-    <h1>Bliv Frivillig 🙌</h1>
-    <p>Vil du være med til at bekæmpe madspild og gøre en forskel?<br>
-        Som frivillig hjælper du os med at redde mad, arrangere events og sprede budskabet.<br>
-        Du bestemmer selv, hvor meget tid du vil bruge!</p>
-</section>
+
+<div class="intro-wrapper">
+    <img src="/images/index/stopMadspild.png" alt="Madspild baggrund" class="intro-baggrund">
+
+    <div class="intro">
+        <h1>Bliv Frivillig 🙌</h1>
+        <p>Vil du være med til at bekæmpe madspild og gøre en forskel?<br>
+            Som frivillig hjælper du os med at redde mad, arrangere events og sprede budskabet.<br>
+            Du bestemmer selv, hvor meget tid du vil bruge!</p>
+    </div>
+</div>
+
+
+
 
 <section class="frivillig-formular">
     <h2>Tilmeld dig her 👇</h2>
-    <form action="#" method="post">
-        <label for="navn"> Navn:</label>
-        <input type="text" id="navn" name="navn" required>
+    <form class="frivillig-form" action="#" method="post">
+        <label class="frivillig-label" for="navn">Navn:</label>
+        <input class="frivillig-input" type="text" id="navn" name="navn" required>
 
-        <label for="alder"> Alder:</label>
-        <input type="number" id="alder" name="alder" min="12" required>
+        <label class="frivillig-label" for="alder">Alder:</label>
+        <input class="frivillig-input" type="number" id="alder" name="alder" min="12" required>
 
-        <label for="telefon"> Telefonnummer:</label>
-        <input type="tel" id="telefon" name="telefon" required>
+        <label class="frivillig-label" for="telefon">Telefonnummer:</label>
+        <input class="frivillig-input" type="tel" id="telefon" name="telefon" required>
 
-        <label for="email"> Email:</label>
-        <input type="email" id="email" name="email" required>
+        <label class="frivillig-label" for="email">Email:</label>
+        <input class="frivillig-input" type="email" id="email" name="email" required>
 
-        <label for="by"> By / Postnummer:</label>
-        <input type="text" id="by" name="by">
+        <label class="frivillig-label" for="by">By / Postnummer:</label>
+        <input class="frivillig-input" type="text" id="by" name="by">
 
-        <label for="interesse"> Hvad vil du gerne hjælpe med?</label>
-        <select id="interesse" name="interesse">
+        <label class="frivillig-label" for="interesse">Hvad vil du gerne hjælpe med?</label>
+        <select class="frivillig-select" id="interesse" name="interesse">
             <option value="madredning">Redde overskudsmad</option>
             <option value="events">Hjælpe til ved events</option>
             <option value="sortering">Sortere mad og varer</option>
             <option value="andet">Andet</option>
         </select>
 
-        <label for="tid"> Hvor meget tid kan du afsætte?</label>
-        <input type="text" id="tid" name="tid" placeholder="f.eks. 3 timer om ugen">
+        <label class="frivillig-label" for="tid">Hvor meget tid kan du afsætte?</label>
+        <input class="frivillig-input" type="text" id="tid" name="tid" placeholder="f.eks. 3 timer om ugen">
 
-        <label for="besked"> Eventuel besked:</label>
-        <textarea id="besked" name="besked" rows="4"></textarea>
+        <label class="frivillig-label" for="besked">Eventuel besked:</label>
+        <textarea class="frivillig-textarea" id="besked" name="besked" rows="4"></textarea>
 
-        <button type="submit">Tilmeld dig!</button>
+        <button class="frivillig-button" type="submit">Tilmeld dig!</button>
     </form>
 </section>
 </div>
