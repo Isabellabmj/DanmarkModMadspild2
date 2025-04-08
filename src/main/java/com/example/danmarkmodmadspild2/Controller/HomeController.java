@@ -9,24 +9,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @GetMapping("/")
-    public String index(Model model)
-    {
+    public String index(Model model) {
         return "home/index";
     }
 
     @GetMapping("/forbruger")
-    public String forbruger(Model model)
-    {
+    public String forbruger(Model model) {
         return "home/forbruger";
     }
-
-
-    // Denne metode viser organisationens underside (organisation.html)
-    @GetMapping("/organisation")
-    public String organisation(Model model) {
-        return "organisation/organisation";  // viser organisation.html fra organisation-mappen
-    }
-}
 
 
     @GetMapping("/informationsSide")
@@ -84,8 +74,7 @@ public class HomeController {
     @GetMapping("/virksomhed-dashboard")
     public String showDashboard() {
         return "home/virksomhed-dashboard";  // Returner dashboard view
+
     }
 
 }
-
-
