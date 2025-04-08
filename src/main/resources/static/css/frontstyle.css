@@ -273,99 +273,127 @@ p {
     margin-right: 10px;
 }
 
-
-
-/*  BARE REDIGERE OG INDSÆT FØR DETTE, SÅ JEG ALTID LIGE KAN HIVE DET TILBAGE I ET ANDET   */
-/*  JEG HAR LIGE TILFØJET MIN STYLESHEET HERIND, FOR AT SE EN ÆNDRING */
-/* Baggrund og generel tekstfarve */
-body {
-    background-color: #faf3e0;
-    color: #2d3e3f;
-    font-family: Arial, sans-serif;
+.opskrift-formular {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
 }
 
-/* Header/logo */
-header {
-    position: absolute;
-    top: -40px;
-    left: 10px;
+.ingrediens-felt {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*.koeleskab-resultat
+{
+    display: flex;
+    justify-content: space-between; Gør at vi kan placere logo til venstre og de andre ting til højre
+    align-items: center;
+    padding: 20px;
+}*/
+
+
+.hoejre-side {
     display: flex;
     align-items: center;
+    gap: 5px;
+    margin: 0;
+
 }
 
-.logo {
-    width: 180px;
+.koeleskabs-billede
+{
+    width: 350px;
     height: auto;
+    border-radius: 5px;
+    opacity: 0.6;
 }
 
-/* Intro sektion (billede + tekst) */
-.intro-wrapper {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
+
+.koeleskab-resultat
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* venstre, midt, højre */
+    max-width: 100%;
+    margin: 50px auto;
+    align-items: flex-start;
+    gap: 400px; /* Dette bestemmer afstanden mellem kolonnerne */
+    padding: 20px 40px; /* Giver luft indvendigt i hele rækken */
 }
 
-.intro-baggrund {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 0;
+.input-venstre,
+.resultat-container
+{
+    display: flex;
+    flex-direction: column;
 }
 
-.intro {
-    position: relative;
-    z-index: 1;
-    text-align: left;
-    padding: 40px 5%;
-    margin-top: -50px;
-    max-width: 800px;
-    color: #0E2F23;
-}
-
-.intro h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #0E2F23;
-}
-
-.intro p {
-    font-size: 20px;
+.ingrediens-linje
+{
     margin-top: 10px;
-    line-height: 1.5;
+}
+
+/*.koeleskabs-billede
+{
+    width: 100%;
+    border-radius: 12px;
+}*/
+
+.opskrift-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.opskrift-billede {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.opskrift-kort {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f0e8d9;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.opskrift-tekst h3 {
+    margin: 0;
     color: #0E2F23;
 }
 
-/* Underrubrikker hvis du bruger dem */
-.subheading {
-    font-size: 1.2em;
-    font-style: italic;
-    text-align: center;
-    margin-top: -10px;
-    color: #2d3e3f;
-}
-
-/* Paragraftekst / madspild info */
-.madspilds-info {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+.opskrift-tekst p {
+    margin-top: 6px;
     color: #333;
+    font-size: 15px;
 }
 
-/* Links */
-.madspild-link {
-    text-decoration: underline;
-    color: #007BFF;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.ingrediens-knap
+{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px; /*Afrundede hjørner*/
+    border: 1px solid #ccc; /*Vi tilføjer en lys grå kant*/
+    width: 250px;
+    background-color: #ffffff;
 }
 
-.madspild-link:hover {
-    color: #0056b3;
+/* Vandmærke */
+.footer-copyright {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 20px;
 }
+
+

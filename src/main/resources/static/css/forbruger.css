@@ -15,7 +15,6 @@ h1{
 /*Styling af underrubik*/
 .subheading{
     font-size: 1.2em;
-    font-style: italic; /* Gør teksten kursiv */
     text-align: left;
     color: #2d3e3f; /* Match farven til resten af designet */
     margin-top: -10px; /* Justerer placeringen tættere på h1 */
@@ -38,7 +37,7 @@ header {
 
 /* Styling for paragrafen af madspildsinfo*/
 .madspilds-info{
-    text-align: center;
+    text-align: left;
     font-size: 16px;
     line-height: 1.5;  /* Giver plads mellem linjerne */
     font-family: Arial, sans-serif;
@@ -48,15 +47,15 @@ header {
 
 /* Styling for linket */
 .madspild-link {
-    text-decoration: underline;
-    color: #007BFF; /* Vælg en blå farve for linket */
-    font-weight: bold; /* Gør linket fedt */
-    transition: color 0.3s ease; /* Tilføjer en glidende overgang, når farven ændres */
+    color: #0E2F23; /* Mørkegrøn som resten af dit tema */
+    font-weight: bold;
+    text-decoration: underline; /* eller none, hvis du ikke vil have stregen */
+    transition: color 0.3s ease;
 }
 
-/* Ændrer linkets farve ved hover */
 .madspild-link:hover {
-    color: #0056b3;  /* En mørkere blå, når brugeren holder musen over linket */
+    color: #146c43; /* En lidt lysere grøn ved hover */
+    text-decoration: none;
 }
 
 
@@ -130,7 +129,7 @@ header {
 .intro-wrapper {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -140,18 +139,17 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Sørger for billedet fylder boksen pænt */
     z-index: 0;
+    opacity: 0.4; /* Gør billedet lyst så teksten bliver læselig */
 }
 
 .intro {
     position: relative;
     z-index: 1;
     text-align: left;
-    padding: 40px 5%;
-    margin-top: -50px;
-    max-width: 800px;
-    color: #0E2F23;
+    padding: 40px 20px;
+    margin-top: -50px; /*Jeg justere teksten her, op og ned*/
 }
 
 /* Faktaboks til informationssiden */
