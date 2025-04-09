@@ -8,6 +8,11 @@ body {
     padding: 0;
 }
 
+.home-logo {
+    width: 140px;
+    height: auto;
+}
+
 .home-button-container {
     position: absolute;
     top: 24px;
@@ -63,6 +68,17 @@ button:hover {
     background-color: #45a049;
 }
 
+footer.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: transparent;
+
+}
+
 @media screen and (max-width: 768px) {
     .main-container {
         padding: 20px;
@@ -77,4 +93,5 @@ button:hover {
         width: 140px;
     }
 }
+
 

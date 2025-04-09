@@ -9,15 +9,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @GetMapping("/")
-    public String index(Model model)
-    {
+    public String index(Model model) {
         return "home/index";
     }
 
     @GetMapping("/forbruger")
-    public String forbruger(Model model)
-    {
+    public String forbruger(Model model) {
         return "home/forbruger";
+    }
+
+
+
+    @GetMapping("/informationsSide")
+    public String informationsSide() {
+        return "informationsSide";  // Returnerer "informationsSide" view via POST
     }
 
     @GetMapping("/virksomhed")
@@ -56,7 +61,7 @@ public class HomeController {
                                   Model model) {
         if ((brugernavn.equals("firma123") || brugernavn.equals("firma@mail.com")) && kodeord.equals("hemmelig123")) {
             return "redirect:/virksomhed-dashboard";
-        }
+        } //Hard coded brugernavn, mail og password, normalt ville det naturligvis ligge i en database.
 
         if (brugernavn.isEmpty() || kodeord.isEmpty()) {
             model.addAttribute("loginFejl", "Brugernavn og kodeord skal udfyldes.");
@@ -69,7 +74,7 @@ public class HomeController {
     @GetMapping("/virksomhed-dashboard")
     public String showDashboard() {
         return "home/virksomhed-dashboard";  // Returner dashboard view
+
     }
+
 }
-
-

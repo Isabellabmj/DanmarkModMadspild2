@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Administrer Varer</title>
+    <link rel="stylesheet" href="/virksomhed.css">
+    <link rel="stylesheet" href="/virksomhed-administrer-varer.css">
+</head>
+<body>
+
+<div class="home-button-container">
+    <form th:action="@{/}" method="get">
+        <button type="submit" class="home-button">
+            <img src="/images/HomeButtonLogo.png" alt="Home" class="home-logo">
+        </button>
+    </form>
+</div>
+
+<div class="dashboard-button-container">
+    <form th:action="@{/overskudsvare-dashboard}" method="get">
+        <button type="submit" class="dashboard-button">Tilbage til Dashboard</button>
+    </form>
+</div>
+
+<div class="main-container">
+    <h2>Dine registrerede varer</h2>
+
+
+    <div th:if="${successMessage}" class="success-message">
+        <p th:text="${successMessage}"></p>
+    </div>
+
+
+    <table class="varer-table">
+        <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Udløbsdato</th>
+            <th>Antal</th>
+            <th>Handling</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="vare : ${varer}">
+            <td th:text="${vare.navn}">Navn</td>
+            <td th:text="${vare.udløbsdato}">Dato</td>
+            <td th:text="${vare.antal}">0</td>
+            <td>
+                <a th:href="@{/virksomhed/slet/{id}(id=${vare.id})}"
+                   class="delete-button"
+                   onclick="return confirm('Er du sikker på, at du vil slette denne vare?');">
+                    Slet
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer class="footer">
+    <p>© 2025 Danmark Mod Madspild</p>
+</footer>
+
+</body>
+</html>

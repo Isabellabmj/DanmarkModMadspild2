@@ -1,0 +1,148 @@
+.dashboard-button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.dashboard-btn {
+    background-color: #4CAF50; /* Samme grøn som i dashboardet */
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-btn:hover {
+    background-color: #45a049;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Sørg for, at body fylder hele skærmen */
+    margin: 0; /* Fjern standard margin */
+}
+
+/* Sørg for at hovedindholdet fylder det resterende rum */
+.main-container {
+    flex-grow: 1; /* Gør, at main-container fylder det resterende rum */
+}
+
+/* Form container */
+.form-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.registered-items {
+    max-height: 400px; /* Maksimal højde for listen */
+    overflow-y: auto; /* Gør det muligt at scrolle vertikalt */
+    padding-right: 10px; /* Lidt ekstra plads til scrollbar */
+}
+
+.registered-items ul {
+    list-style-type: none; /* Fjern punkttegn */
+    padding: 0;
+    margin: 0;
+}
+
+.registered-items li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, label {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 16px;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Succesbesked */
+.succesbesked {
+    color: #4CAF50; /* Grøn farve */
+    background-color: #e8f5e9; /* Lys grøn baggrund */
+    padding: 8px 12px; /* Mindre padding */
+    border-radius: 5px;
+    border: 1px solid #4CAF50; /* Grøn kant */
+    margin-bottom: 10px; /* Mindre margin */
+    font-weight: bold;
+    text-align: center;
+    max-width: 100%; /* Sikrer at den ikke breder sig for meget */
+    word-wrap: break-word; /* Længere tekst brydes korrekt */
+}
+
+.button-container {
+    position: absolute;
+    top: 10px; /* Keeps it near the top */
+    right: 10px; /* Moves it to the right side */
+    z-index: 1100; /* Ensures it’s above the home-button-container */
+    margin: 0; /* Overrides any margin from virksomhed.css */
+    display: block; /* Overrides flex-direction if needed */
+}
+
+/* Style the button itself */
+.btn {
+    width: auto; /* Overrides the 100% width from virksomhed.css */
+    padding: 8px 16px; /* Adjust padding for a tighter button */
+    font-size: 14px; /* Slightly smaller font size */
+    background-color: #4CAF50; /* Keeps the green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #45a049; /* Keeps the hover effect */
+}
+
+
+
+/* Footer styling */
+.footer {
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: auto; /* Sikrer at footeren altid er i bunden */
+}
