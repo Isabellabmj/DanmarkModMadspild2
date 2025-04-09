@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Virksomhed</title>
-    <link rel="stylesheet" href="/virksomhed.css">
+    <link rel="stylesheet" href="/css/virksomhed/virksomhed.css">
 </head>
 <body>
 
 
 <div class="home-button-container">
-    <form th:action="@{/}" method="get">
+    <form th:action="@{/static}" method="get">
         <button type="submit" class="home-button">
-            <img src="/images/HomeButtonLogo.png" alt="Home" class="home-logo">
+            <img src="/images/organisation/HomeButtonLogo.png" alt="Home" class="home-logo">
         </button>
     </form>
 </div>
@@ -30,6 +30,10 @@
         </form>
     </div>
 </div>
+
+<footer class="footer">
+    <p>© 2025 Danmark Mod Madspild</p>
+</footer>
 
 
 

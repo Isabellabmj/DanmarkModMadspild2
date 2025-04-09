@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Virksomhed Login</title>
-    <link rel="stylesheet" href="/virksomhed.css">
-    <link rel="stylesheet" href="/virksomhed-login.css">
+    <link rel="stylesheet" href="/css/virksomhed/virksomhed.css">
+    <link rel="stylesheet" href="/css/virksomhed/virksomhed-login.css">
 
 </head>
 <body>
 
 <div class="home-button-container">
-    <form th:action="@{/}" method="get">
+    <form th:action="@{/static}" method="get">
         <button type="submit" class="home-button">
-            <img src="/images/HomeButtonLogo.png" alt="Home" class="home-logo">
+            <img src="/images/organisation/HomeButtonLogo.png" alt="Home" class="home-logo">
         </button>
     </form>
 </div>
@@ -37,6 +37,10 @@
         <button type="submit">Log ind</button>
     </form>
 </div>
+
+<footer class="footer">
+    <p>© 2025 Danmark Mod Madspild</p>
+</footer>
 
 </body>
 </html>
