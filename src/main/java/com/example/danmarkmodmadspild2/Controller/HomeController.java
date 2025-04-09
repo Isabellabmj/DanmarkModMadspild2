@@ -9,16 +9,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @GetMapping("/")
-    public String index(Model model)
-    {
+    public String index(Model model) {
         return "home/index";
     }
 
     @GetMapping("/forbruger")
-    public String forbruger(Model model)
-    {
+    public String forbruger(Model model) {
         return "home/forbruger";
     }
+
+
+
+    @GetMapping("/informationsSide")
+    public String informationsSide() {
+        return "informationsSide";  // Returnerer "informationsSide" view via POST
+    }
+
 
     @GetMapping("/virksomhed")
     public String showVirksomhedPage() {
@@ -69,7 +75,7 @@ public class HomeController {
     @GetMapping("/virksomhed-dashboard")
     public String showDashboard() {
         return "home/virksomhed-dashboard";  // Returner dashboard view
+
     }
+
 }
-
-
