@@ -36,38 +36,87 @@ public class ForbrugerController
 
         List<Opskrift> opskrifter = new ArrayList<>();  //En tom liste, som vi vil fylde med matchende opskrifter, hvis betingelserne nedenfor opfyldes.
 
-        // Er lavet uden råvare objekter, kan tilføjes hvis tid
-        if (forbrugerIndtast.contains("hvidløg") && forbrugerIndtast.contains("løg") && forbrugerIndtast.contains("tomat"))
+
+        List<String> arrabiataIngredienser = List.of("hvidløg", "løg", "tomat", "chili");
+        if (antalMatchendeIngredienser(forbrugerIndtast, arrabiataIngredienser) >= 2)
         {
             opskrifter.add(new Opskrift(
                     "Pasta Arrabiata",
-                    null,// Vi kan tilføje ingredienser her senere
+                    null,
                     "/images/forbruger/pastaArrabiata.png",
                     "En krydret italiensk pastaret med hvidløg, chili og tomat. Perfekt med friskrevet parmesan og lidt basilikum."
             ));
         }
 
-        if (forbrugerIndtast.contains("æg") && forbrugerIndtast.contains("purløg"))
+        // Omelet med purløg
+        List<String> omeletIngredienser = List.of("æg", "purløg", "mælk");
+        if (antalMatchendeIngredienser(forbrugerIndtast, omeletIngredienser) >= 2)
         {
             opskrifter.add(new Opskrift(
                     "Omelet med æg og purløg",
                     null,
                     "/images/forbruger/omelet.png",
-                    "Lækker røræg med purløg..."
+                    "Lækker omelet med purløg og cremet konsistens – perfekt til morgenmad eller frokost."
+            ));
+        }
+
+        // Kartoffel-løg tærte
+        List<String> taerteIngredienser = List.of("kartoffel", "løg", "fløde");
+        if (antalMatchendeIngredienser(forbrugerIndtast, taerteIngredienser) >= 2)
+        {
+            opskrifter.add(new Opskrift(
+                    "Kartoffel-løg tærte",
+                    null,
+                    "/images/forbruger/taerte.png",
+                    "En sprød tærte med kartofler og karamelliserede løg. Perfekt som frokostret."
+            ));
+        }
+
+        List<String> indiskCurry = List.of("chili", "hvidløg", "løg");
+        if(antalMatchendeIngredienser(forbrugerIndtast, indiskCurry) >= 2)
+        {
+            opskrifter.add(new Opskrift(
+                    "Indisk tomat-curry",
+                    null,
+                    "/images/forbruger/indiskCurry.png",
+                    "En fyldig og aromatisk curry med tomat, chili og hvidløg – server med ris eller naan."
+            ));
+        }
+
+        List<String> tomatSuppe = List.of("chili", "løg", "hvidløg", "tomat");
+        if(antalMatchendeIngredienser(forbrugerIndtast, tomatSuppe) >= 2)
+        {
+            opskrifter.add(new Opskrift(
+                    "Spicy tomat suppe",
+                    null,
+                    "/images/forbruger/tomatsuppe.png",
+                    "En varmende, spicy tomatsuppe. Kan toppes med creme fraiche og evt. ristede kikærter eller brødcroutoner."
             ));
         }
 
         if (opskrifter.isEmpty())
         {
             model.addAttribute("resultat", "Vi fandt ingen matchende opskrifter – prøv med nogle andre ingredienser 🍽️");
-        }
-        else
-        {
+        } else {
             model.addAttribute("opskrifter", opskrifter);
         }
 
         return "forbruger/koeleskab";
     }
+
+    private int antalMatchendeIngredienser(List<String> brugerIngredienser, List<String> opskriftIngredienser)
+    {
+        int count = 0;
+        for (String ingrediens : opskriftIngredienser)
+        {
+            if (brugerIngredienser.contains(ingrediens))
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
 
 
     @GetMapping("/forbruger/informationspage")
