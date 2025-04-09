@@ -83,16 +83,16 @@
     </div>
 
     <div class="resultat-container">
-        <div th:if="${opskrifter}"> <!-- hvis der kommer Opskrift-objekter -->
+        <div th:if="${opskrifter}"> <!-- Kun vis dette indhold, hvis variablen opskrifter eksisterer (og ikke er tom/null) -->
             <h2>Vi foreslår:</h2>
-            <div th:each="opskrift : ${opskrifter}" class="opskrift-kort">
+            <div th:each="opskrift : ${opskrifter}" class="opskrift-kort"> <!-- vi gennemgår hver opskrift i listen opskrifter-->
                 <img th:src="@{${opskrift.billedeURL}}" alt="Billede af opskrift" class="opskrift-billede">
                 <div>
                     <h3 th:text="${opskrift.titel}"></h3>
                     <p th:text="${opskrift.beskrivelse}"></p> <!-- Her vises beskrivelsen -->
-                    <ul>
+                    <!--<ul>
                         <li th:each="ingrediens : ${opskrift.ingredienser}" th:text="${ingrediens.raavareNavn}"></li>
-                    </ul>
+                    </ul> // Denne ville vi bruge hvis vi havde nået at implementere raavarer i opgaven-->
                 </div>
             </div>
         </div>
