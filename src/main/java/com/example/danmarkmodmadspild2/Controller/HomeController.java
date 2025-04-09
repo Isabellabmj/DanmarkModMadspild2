@@ -25,7 +25,6 @@ public class HomeController {
         return "informationsSide";  // Returnerer "informationsSide" view via POST
     }
 
-
     @GetMapping("/virksomhed")
     public String showVirksomhedPage() {
         return "home/virksomhed";
@@ -62,7 +61,7 @@ public class HomeController {
                                   Model model) {
         if ((brugernavn.equals("firma123") || brugernavn.equals("firma@mail.com")) && kodeord.equals("hemmelig123")) {
             return "redirect:/virksomhed-dashboard";
-        }
+        } //Hard coded brugernavn, mail og password, normalt ville det naturligvis ligge i en database.
 
         if (brugernavn.isEmpty() || kodeord.isEmpty()) {
             model.addAttribute("loginFejl", "Brugernavn og kodeord skal udfyldes.");

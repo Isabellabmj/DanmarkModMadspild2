@@ -23,3 +23,5 @@ public class ForbrugerController {
         return "forbruger/koeleskab";
     }
 }
+
+
