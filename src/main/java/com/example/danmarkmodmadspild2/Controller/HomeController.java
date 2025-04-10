@@ -49,7 +49,7 @@ public class HomeController {
                                @RequestParam String lokation,
                                @RequestParam String kodeord) {
 
-        return "redirect:virksomhed/virksomhed-signup-bekraeftelse";
+        return "redirect:virksomhed-signup-bekraeftelse";
     }
 
     @GetMapping("/virksomhed-login")
@@ -62,7 +62,7 @@ public class HomeController {
                                   @RequestParam String kodeord,
                                   Model model) {
         if ((brugernavn.equals("firma123") || brugernavn.equals("firma@mail.com")) && kodeord.equals("hemmelig123")) {
-            return "redirect:virksomhed/virksomhed-dashboard";
+            return "redirect:virksomhed-dashboard";
         } //Hard coded brugernavn, mail og password, normalt ville det naturligvis ligge i en database.
 
         if (brugernavn.isEmpty() || kodeord.isEmpty()) {
