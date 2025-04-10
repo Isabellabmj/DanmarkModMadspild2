@@ -22,7 +22,7 @@ public class ForbrugerController
 
 
     @PostMapping("/find-opskrifter")
-    public String findOpskrifter(@RequestParam List<String> ingredienser, Model model)  //@RequestParam bryges til at hente værdier fra HTTP request
+    public String findOpskrifter(@RequestParam List<String> ingredienser, Model model)  //@RequestParam bruges til at hente værdier fra HTTP request
     {
         List<String> forbrugerIndtast = new ArrayList<>();
 
@@ -125,10 +125,10 @@ public class ForbrugerController
         return "forbruger/informationspage";
     }
 
-    @GetMapping("/forbruger/frivilig")
+    @GetMapping("/forbruger/frivillig")
     public String frivilig()
     {
-        return "forbruger/frivilig";
+        return "forbruger/frivillig";
     }
 
     @GetMapping("/forbruger/nyhedsbrev")

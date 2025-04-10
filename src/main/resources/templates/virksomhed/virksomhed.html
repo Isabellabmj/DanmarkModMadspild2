@@ -6,17 +6,75 @@
     <title>Virksomhed</title>
     <link rel="stylesheet" href="/css/virksomhed/virksomhed.css">
     <link rel="stylesheet" href="/css/frontstyle.css">
+    <link rel="stylesheet" href="/css/virksomhed.css">
 </head>
 <body>
 
 
-<div class="home-button-container">
-    <form th:action="@{/}" method="get">
-        <button type="submit" class="home-button">
-            <img src="/images/index/KorrektLogo.png" alt="Home" class="home-logo">
-        </button>
-    </form>
+<div class="top-wrapper">
+    <div class="logo-left">
+        <a href="/">
+            <img src="/images/index/KorrektLogo.png" alt="Danmark mod Madspild logo" class="header-logo">
+        </a>
+    </div>
+
+    <div class="right-side">
+
+        <div class="dropdown">
+            <button class="dropdown-knap">Nyttige links ▾</button>
+            <div class="dropdown-content">
+                <a href="#">Kontakt os</a>
+                <a href="/organisation">Om Danmark mod Madspild</a>
+                <a href="#">Årsrapport</a>
+                <a href="#">Interessant for organisationer</a>
+            </div>
+        </div>
+
+        <div class="social-media-bar">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="/images/SocialMedia/facebookBlaa.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="/images/SocialMedia/IG.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="/images/SocialMedia/Youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="/images/SocialMedia/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="#">
+                <img src="/images/SocialMedia/UKflag.png" alt="English">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Søg på siden">
+            <button>Søg</button>
+        </div>
+
+    </div>
 </div>
+
+
+<hr class="top-divider">
+
+
+<div class="virksomhed-intro-wrapper">
+    <img src="/images/virksomhed/virksomhedGrøn.png" alt="Madspild baggrund" class="virksomhed-intro-baggrund">
+
+    <div class="virksomhed-intro">
+        <h1>Velkommen til virksomhedsportalen hos <Strong>Danmark mod Madspild</Strong></h1>
+        <p>
+            Her kan jeres virksomhed blive en aktiv del af kampen mod madspild. <br>
+            Ved at logge ind – eller oprette en ny virksomhedsprofil – får I adgang til vores platform, hvor I nemt kan registrere varer, der ellers risikerer at blive kasseret.<br>
+            Varerne kan enten doneres til organisationer eller sælges til en reduceret pris til lokale forbrugere.
+        </p>
+    </div>
+</div>
+
+
+
 
 <div class="main-container">
     <h2>Velkommen Virksomhed</h2>
