@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Danmark Mod Madspild</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virksomhed</title>
+    <link rel="stylesheet" href="/css/virksomhed/virksomhed.css">
     <link rel="stylesheet" href="/css/frontstyle.css">
+    <link rel="stylesheet" href="/css/virksomhed.css">
 </head>
 <body>
 
@@ -57,47 +60,42 @@
 <hr class="top-divider">
 
 
-<div class="intro-wrapper">
-    <img src="/images/index/grønForside.png" alt="Madspild baggrund" class="intro-baggrund">
+<div class="virksomhed-intro-wrapper">
+    <img src="/images/virksomhed/virksomhedGrøn.png" alt="Madspild baggrund" class="virksomhed-intro-baggrund">
 
-    <div class="intro">
-        <h1>Gør en forskel med os!</h1>
+    <div class="virksomhed-intro">
+        <h1>Velkommen til virksomhedsportalen hos <Strong>Danmark mod Madspild</Strong></h1>
         <p>
-            Sammen skaber vi en grønnere fremtid – <br>
-            <Strong>Danmark mod Madspild</Strong> forbinder forbrugere, virksomheder og organisationer <br>
-            for at bekæmpe madspild i hele landet.
+            Her kan jeres virksomhed blive en aktiv del af kampen mod madspild. <br>
+            Ved at logge ind – eller oprette en ny virksomhedsprofil – får I adgang til vores platform, hvor I nemt kan registrere varer, der ellers risikerer at blive kasseret.<br>
+            Varerne kan enten doneres til organisationer eller sælges til en reduceret pris til lokale forbrugere.
         </p>
     </div>
 </div>
 
 
-<div class="brugergruppe-container">
-    <div class="bruger-boks">
-        <h3>Forbruger</h3>
-        <a href="/forbruger">
-            <img src="/images/index/logo1.png" alt="Forbruger" class="forside-billeder">
-        </a>
-        <p>Få tips til at undgå madspild, indtast ingredienser og få opskrifter – tilmeld dig nyhedsbrevet.</p>
-    </div>
 
-    <div class="bruger-boks">
-        <h3>Virksomhed</h3>
-        <a href="/virksomhed">
-            <img src="/images/organisation/logo2virksomheder.png" alt="Virksomhed" class="forside-billeder">
-        </a>
-        <p>Opret en profil og del overskudsvarer med forbrugere og organisationer i dit lokalområde.</p>
-    </div>
 
-    <div class="bruger-boks">
-        <h3>Organisation</h3>
-        <a href="/organisation">
-            <img src="/images/index/logo3.png" alt="Organisation" class="forside-billeder">
-        </a>
-        <p>Find donationer, skab aktiviteter og oplys om madspild på din egen side.</p>
+<div class="main-container">
+    <h2>Velkommen Virksomhed</h2>
+
+    <div class="button-container">
+        <form th:action="@{/virksomhed-login}" method="get">
+            <button type="submit" class="button">Login</button>
+        </form>
+
+        <form th:action="@{/virksomhed-signup}" method="get">
+            <button type="submit" class="button">Sign Up</button>
+        </form>
     </div>
 </div>
 
 
-<p class="footer-copyright">© 2025 Danmark Mod Madspild</p>
+
+<div>
+    <footer>
+    <p class="footer-copyright">© 2025 Danmark Mod Madspild</p>
+    </footer>
+</div>
 </body>
 </html>

@@ -17,12 +17,12 @@ public class ForbrugerController
     @GetMapping("/forbruger/koeleskab")
     public String visKoeleskabsside()
     {
-        return "forbruger/koeleskab"; // matcher /templates/forbruger/koeleskab.html
+        return "forbruger/koeleskab";
     }
 
 
     @PostMapping("/find-opskrifter")
-    public String findOpskrifter(@RequestParam List<String> ingredienser, Model model)
+    public String findOpskrifter(@RequestParam List<String> ingredienser, Model model)  //@RequestParam bruges til at hente værdier fra HTTP request
     {
         List<String> forbrugerIndtast = new ArrayList<>();
 
@@ -37,8 +37,8 @@ public class ForbrugerController
         List<Opskrift> opskrifter = new ArrayList<>();  //En tom liste, som vi vil fylde med matchende opskrifter, hvis betingelserne nedenfor opfyldes.
 
 
-        List<String> arrabiataIngredienser = List.of("hvidløg", "løg", "tomat", "chili");
-        if (antalMatchendeIngredienser(forbrugerIndtast, arrabiataIngredienser) >= 2)
+        List<String> arrabiata = List.of("hvidløg", "løg", "tomat", "chili");
+        if (antalMatchendeIngredienser(forbrugerIndtast, arrabiata) >= 2)
         {
             opskrifter.add(new Opskrift(
                     "Pasta Arrabiata",
@@ -48,9 +48,9 @@ public class ForbrugerController
             ));
         }
 
-        // Omelet med purløg
-        List<String> omeletIngredienser = List.of("æg", "purløg", "mælk");
-        if (antalMatchendeIngredienser(forbrugerIndtast, omeletIngredienser) >= 2)
+
+        List<String> omelet = List.of("æg", "purløg", "mælk");
+        if (antalMatchendeIngredienser(forbrugerIndtast, omelet) >= 2)
         {
             opskrifter.add(new Opskrift(
                     "Omelet med æg og purløg",
@@ -60,9 +60,9 @@ public class ForbrugerController
             ));
         }
 
-        // Kartoffel-løg tærte
-        List<String> taerteIngredienser = List.of("kartoffel", "løg", "fløde");
-        if (antalMatchendeIngredienser(forbrugerIndtast, taerteIngredienser) >= 2)
+
+        List<String> taerte = List.of("kartoffel", "løg", "fløde");
+        if (antalMatchendeIngredienser(forbrugerIndtast, taerte) >= 2)
         {
             opskrifter.add(new Opskrift(
                     "Kartoffel-løg tærte",
@@ -106,10 +106,10 @@ public class ForbrugerController
 
     private int antalMatchendeIngredienser(List<String> brugerIngredienser, List<String> opskriftIngredienser)
     {
-        int count = 0;
-        for (String ingrediens : opskriftIngredienser)
+        int count = 0; //holder styr på hvor mange ingredienser der matcher
+        for (String ingrediens : opskriftIngredienser)  //Vi går igennem hver ingrediens i opskriftens ingrediensliste
         {
-            if (brugerIngredienser.contains(ingrediens))
+            if (brugerIngredienser.contains(ingrediens)) //Vi tjekker, om den pågældende opskrift-ingrediens også findes i brugerens liste
             {
                 count++;
             }
@@ -125,10 +125,10 @@ public class ForbrugerController
         return "forbruger/informationspage";
     }
 
-    @GetMapping("/forbruger/frivilig")
+    @GetMapping("/forbruger/frivillig")
     public String frivilig()
     {
-        return "forbruger/frivilig";
+        return "forbruger/frivillig";
     }
 
     @GetMapping("/forbruger/nyhedsbrev")

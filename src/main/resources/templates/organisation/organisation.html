@@ -3,49 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Organisation - Madspild</title>
-    <link rel="stylesheet" href="/organisation.css">
+    <link rel="stylesheet" href="/css/organisation.css">
+    <link rel="stylesheet" href="/css/frontstyle.css">
+
 </head>
 <body>
 
-<body>
-<div class="page-wrapper">
-
-<!-- Logo -->
-<div class="logo">
-    <img src="/images/logo.png" alt="Madspild Logo">
-</div>
-
-<!-- Log ind-knap i øverste højre hjørne -->
-<div class="login-button">
-    <a href="/login">🔐 Log ind</a>
-</div>
-
-<main class="container">
-
-    <div class="org-image-links">
-        <div class="org-link">
-            <a href="/organisation/samarbejde">
-                <img src="/images/indgaa_samarbejde.jpg" alt="Samarbejd med os">
-                <p>Samarbejd med os</p>
-            </a>
-        </div>
-        <div class="org-link">
-            <a href="/organisation/inspiration">
-                <img src="/images/faa_inspiration.jpg" alt="Få inspiration">
-                <p>Få inspiration</p>
-            </a>
-        </div>
-        <div class="org-link">
-            <a href="/organisation/stoet">
-                <img src="/images/stot_vores_arbejde.jpg" alt="Støt vores arbejde">
-                <p>Støt vores arbejde</p>
-            </a>
-        </div>
+<div class="top-wrapper">
+    <div class="logo-left">
+        <a href="/">
+            <img src="/images/index/KorrektLogo.png" alt="Danmark mod Madspild logo" class="header-logo">
+        </a>
     </div>
 
+    <div class="right-side">
+
+        <div class="dropdown">
+            <button class="dropdown-knap">Nyttige links ▾</button>
+            <div class="dropdown-content">
+                <a href="#">Kontakt os</a>
+                <a href="/organisation">Om Danmark mod Madspild</a>
+                <a href="#">Årsrapport</a>
+                <a href="#">Interessant for organisationer</a>
+            </div>
+        </div>
+
+        <div class="social-media-bar">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="/images/SocialMedia/facebookBlaa.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="/images/SocialMedia/IG.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="/images/SocialMedia/Youtube.png" alt="YouTube">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="/images/SocialMedia/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="#">
+                <img src="/images/SocialMedia/UKflag.png" alt="English">
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Søg på siden">
+            <button>Søg</button>
+        </div>
+
+    </div>
+</div>
 
 
-</main>
+<hr class="top-divider">
+
+<div class="organisation-intro-wrapper">
+    <img src="/images/organisation/orgBanner.png" alt="Madspild baggrund" class="organisation-intro-baggrund">
+
+    <div class="organisation-intro">
+        <h1><Strong>Danmark mod Madspild – Sammen skaber vi forandring</Strong></h1>
+        <p>
+            Hos Danmark mod Madspild tror vi på, at de bedste løsninger opstår i fællesskab. <br>
+            Vi inviterer jer – virksomheder, foreninger, ildsjæle og initiativtagere – til at blive en aktiv del af bevægelsen mod madspild.<br>
+            Uanset om I vil bidrage med viden, ressourcer, ideer eller blot lade jer inspirere, er der plads til jer i vores fællesskab.
+        </p>
+    </div>
+</div>
+
+<div class="page-wrapper">
+
+    <!-- Logo -->
+
+
+    <!-- Log ind-knap i øverste højre hjørne -->
+    <div class="login-button">
+        <a href="/login">🔐 Log ind</a>
+    </div>
+
+    <main class="container">
+
+
+        <!--Lige nu linker vi til forbruger og virksomhedssiderne, det skulle selvfølgelig have været separate sider der passer til organisationen og dens formål-->
+        <!--Men det har vi ikke nået-->
+
+        <div class="org-image-links">
+            <div class="org-link">
+                <a href="/virksomhed">
+                    <img src="/images/organisation/org_samarbejde.png" alt="Samarbejd med os">
+                    <p>Samarbejd med os</p>
+                </a>
+            </div>
+            <div class="org-link">
+                <a href="/forbruger/informationspage">
+                    <img src="/images/organisation/org_ide.png" alt="Få inspiration">
+                    <p>Få inspiration</p>
+                </a>
+            </div>
+            <div class="org-link">
+                <a href="/forbruger/frivillig">
+                    <img src="/images/organisation/org_donation.png" alt="Støt vores arbejde">
+                    <p>Støt vores arbejde</p>
+                </a>
+            </div>
+        </div>
+
+
+
+    </main>
 
 
     <div class="newsletter-footer">

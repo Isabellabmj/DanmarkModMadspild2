@@ -28,7 +28,7 @@ public class OverskudsvareController {
     public String showDashboard(Model model) {
 
         model.addAttribute("varer", overskudsvarer);
-        return "home/virksomhed-dashboard";
+        return "virksomhed/virksomhed-dashboard";
     }
 
 
@@ -42,7 +42,7 @@ public class OverskudsvareController {
 
         if (date.isBefore(LocalDate.now())) {
             model.addAttribute("fejlbesked", "Udløbsdato må ikke være i fortiden.");
-            return "home/virksomhed-dashboard";
+            return "virksomhed/virksomhed-dashboard";
         }
 
         // Oprette og tilføje overskudsvare
@@ -55,7 +55,7 @@ public class OverskudsvareController {
         model.addAttribute("succesbesked", "Varen blev registreret succesfuldt!");
         model.addAttribute("varer", overskudsvarer);
 
-        return "home/virksomhed-dashboard"; // Returner til dashboardet
+        return "virksomhed/virksomhed-dashboard"; // Returner til dashboardet
     }
 
 
@@ -63,7 +63,7 @@ public class OverskudsvareController {
     public String visVarer(Model model, @ModelAttribute("successMessage") String successMessage) {
         model.addAttribute("varer", varer);
         model.addAttribute("successMessage", successMessage);
-        return "home/virksomhed-administrer-varer";
+        return "virksomhed/virksomhed-administrer-varer";
     }
 
     @GetMapping("/virksomhed/slet/{id}")

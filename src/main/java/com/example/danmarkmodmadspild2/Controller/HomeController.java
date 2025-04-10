@@ -9,35 +9,37 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model)
+    {
         return "home/index";
     }
 
     @GetMapping("/forbruger")
-    public String forbruger(Model model) {
-        return "home/forbruger";
+    public String forbruger(Model model)
+    {
+        return "forbruger/forbruger";
     }
 
 
 
     @GetMapping("/informationsSide")
     public String informationsSide() {
-        return "informationsSide";  // Returnerer "informationsSide" view via POST
+        return "virksomhed/informationsSide";  // Returnerer "informationsSide" view via POST
     }
 
     @GetMapping("/virksomhed")
     public String showVirksomhedPage() {
-        return "home/virksomhed";
+        return "virksomhed/virksomhed";
     }
 
     @GetMapping("/virksomhed-signup")
     public String showSignupPage() {
-        return "home/virksomhed-signup";
+        return "virksomhed/virksomhed-signup";
     }
 
     @GetMapping("/virksomhed-signup-bekraeftelse")
     public String visBekraeftelse() {
-        return "home/virksomhed-signup-bekraeftelse";
+        return "virksomhed/virksomhed-signup-bekraeftelse";
     }
 
     @PostMapping("/virksomhed-signup")
@@ -47,12 +49,12 @@ public class HomeController {
                                @RequestParam String lokation,
                                @RequestParam String kodeord) {
 
-        return "redirect:/virksomhed-signup-bekraeftelse";
+        return "redirect:virksomhed-signup-bekraeftelse";
     }
 
     @GetMapping("/virksomhed-login")
     public String showLoginPage() {
-        return "home/virksomhed-login";
+        return "virksomhed/virksomhed-login";
     }
 
     @PostMapping("/virksomhed-login")
@@ -60,7 +62,7 @@ public class HomeController {
                                   @RequestParam String kodeord,
                                   Model model) {
         if ((brugernavn.equals("firma123") || brugernavn.equals("firma@mail.com")) && kodeord.equals("hemmelig123")) {
-            return "redirect:/virksomhed-dashboard";
+            return "redirect:virksomhed-dashboard";
         } //Hard coded brugernavn, mail og password, normalt ville det naturligvis ligge i en database.
 
         if (brugernavn.isEmpty() || kodeord.isEmpty()) {
@@ -68,12 +70,12 @@ public class HomeController {
         } else {
             model.addAttribute("loginFejl", "Forkert brugernavn eller kodeord.");
         }
-        return "home/virksomhed-login";
+        return "virksomhed/virksomhed-login";
     }
 
     @GetMapping("/virksomhed-dashboard")
     public String showDashboard() {
-        return "home/virksomhed-dashboard";  // Returner dashboard view
+        return "virksomhed/virksomhed-dashboard";  // Returner dashboard view
 
     }
 

@@ -1,0 +1,37 @@
+.virksomhed-intro-wrapper
+{
+    position: relative;
+    width: 100%;
+    height: 200px; /* Justér højde efter billedets højde */
+    overflow: hidden;
+}
+
+.virksomhed-intro-baggrund
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for billedet fylder boksen pænt */
+    z-index: 0;
+    opacity: 0.9; /* Gør billedet lyst så teksten bliver læselig */
+}
+
+.virksomhed-intro
+{
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    padding: 40px 20px;
+    margin-top: -70px; /*Jeg justere teksten her, op og ned*/
+}
+
+.virksomhed-intro h1 {
+    color: #f0e8d9;
+}
+
+.virksomhed-intro p {
+    color: #f0e8d9;
+}
+
