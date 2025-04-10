@@ -11,13 +11,13 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    margin: 200px auto 60px;  /* 🔽 Rykker dem længere ned */
+    margin: 200px auto 60px;  /* Rykker dem længere ned */
     flex-wrap: wrap;
 }
 
 .org-link {
     text-align: center;
-    width: 200px;            /* 🔧 Ens bredde */
+    width: 200px;            /* Ens bredde */
 }
 
 .org-link img {
@@ -86,7 +86,7 @@ body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    border-top: 2px solid #ccc;  /* 🔧 Her er linjen tilbage */
+    border-top: 2px solid #ccc;  /* Her er linjen tilbage */
 
 }
 
