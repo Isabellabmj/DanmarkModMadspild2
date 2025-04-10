@@ -30,10 +30,7 @@ header {
     align-items: center;
 }
 
-.logo {
-    width: 180px;  /* Justér størrelsen */
-    height: auto;  /* Bevarer proportionerne */
-}
+/*----------------------------*/
 
 /* Styling for paragrafen af madspildsinfo*/
 .madspilds-info{
@@ -58,9 +55,7 @@ header {
     text-decoration: none;
 }
 
-
-
-
+/*----------------------------*/
 
 /* Kode til styling af boks*/
 .brugergruppe-container {
@@ -87,45 +82,15 @@ header {
     margin-bottom: 20px;
 }
 
-.bruger-billede {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    margin-bottom: 20px;
-}
-
 .bruger-boks p {
     font-size: 16px;
     color: #333;
     margin-top: 15px;
 }
 
+/*----------------------------*/
 
-/* En anden struktur for styling af box */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.box {
-    background-color: #f0e8d9;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.box img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
+/* Styling af intro */
 .intro-wrapper {
     position: relative;
     width: 100%;
@@ -152,22 +117,3 @@ header {
     margin-top: -50px; /*Jeg justere teksten her, op og ned*/
 }
 
-/* Faktaboks til informationssiden */
-.faktaboks {
-    background-color: #f0f8f5;
-    border-left: 6px solid #4CAF50;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex: 0 1 300px;
-}
-
-.faktaboks h2 {
-    margin-top: 0;
-    color: #2e7d32;
-}
-
-.faktaboks p {
-    margin: 10px 0 0 0;
-}

@@ -34,7 +34,7 @@ h2 {
 }
 
 .form-group input:focus {
-    border-color: #4CAF50; /* Green border on focus */
+    border-color: #4CAF50;
     outline: none;
 }
 
